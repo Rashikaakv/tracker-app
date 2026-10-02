@@ -5,7 +5,7 @@ function App() {
   const players = [
     { id: 1, name: "Asha", score: 450 },
     { id: 2, name: "Ravi", score: 380 },
-    { id: 3, name: "Rashikaa", score: 310 },
+    { id: 3, name: "Rashikaa", score: 610 },
     { id: 4, name: "Meera", score: 500 },
   ]
 

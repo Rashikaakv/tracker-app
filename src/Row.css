@@ -25,6 +25,21 @@
   border-radius: 50%;
 }
 
+.medal-1 {
+  background: #f5b301;
+  color: #1f2937;
+}
+
+.medal-2 {
+  background: #9ca3af;
+  color: #1f2937;
+}
+
+.medal-3 {
+  background: #cd7f32;
+  color: #ffffff;
+}
+
 .name {
   flex: 1;
   font-size: 18px;
