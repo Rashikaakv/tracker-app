@@ -1,21 +1,35 @@
+import { useState, useEffect } from 'react'
 import './App.css'
 import Row from './Row'
+import { supabase } from './supabaseClient'
 
 function App() {
-  const players = [
-    { id: 1, name: "Asha", score: 450 },
-    { id: 2, name: "Ravi", score: 380 },
-    { id: 3, name: "Rashikaa", score: 610 },
-    { id: 4, name: "Meera", score: 500 },
-  ]
+  const [players, setPlayers] = useState([])
+  const [error, setError] = useState(null)
 
-  const sorted = [...players].sort((a, b) => b.score - a.score)
+  useEffect(() => {
+    async function loadPlayers() {
+      const { data, error } = await supabase
+        .from('players')
+        .select('*')
+        .order('score', { ascending: false })
+
+      if (error) {
+        setError(error.message)
+      } else {
+        setPlayers(data)
+      }
+    }
+
+    loadPlayers()
+  }, [])
 
   return (
     <>
       <h1>Coding Tracker</h1>
       <p>This week's leaderboard</p>
-      {sorted.map((p, i) => (
+      {error && <p>Could not load players: {error}</p>}
+      {players.map((p, i) => (
         <Row key={p.id} rank={i + 1} name={p.name} score={p.score} />
       ))}
     </>
