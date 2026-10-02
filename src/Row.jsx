@@ -1,8 +1,12 @@
+import './Row.css'
+
 function Row(props) {
   return (
-    <p>
-      {props.rank}. {props.name} - {props.score} points
-    </p>
+    <div className="row">
+      <span className="rank">{props.rank}</span>
+      <span className="name">{props.name}</span>
+      <span className="score">{props.score} XP</span>
+    </div>
   )
 }
 

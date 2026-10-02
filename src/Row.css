@@ -1,0 +1,37 @@
+.row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 480px;
+  margin: 12px auto;
+  padding: 14px 20px;
+  background: #ffffff;
+  color: #1f2937;
+  border: 2px solid #ddd6fe;
+  border-radius: 16px;
+  box-shadow: 0 4px 0 #ddd6fe;
+  text-align: left;
+}
+
+.rank {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #7c3aed;
+  color: #ffffff;
+  font-weight: 800;
+  border-radius: 50%;
+}
+
+.name {
+  flex: 1;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.score {
+  font-weight: 800;
+  color: #2563eb;
+}
