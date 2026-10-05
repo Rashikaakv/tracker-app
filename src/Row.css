@@ -5,11 +5,10 @@
   max-width: 480px;
   margin: 12px auto;
   padding: 14px 20px;
-  background: #ffffff;
-  color: #1f2937;
-  border: 2px solid #ddd6fe;
+  background: rgba(255, 255, 255, 0.08);
+  color: #f7eef4;
+  border: 1px solid rgba(184, 220, 240, 0.3);
   border-radius: 16px;
-  box-shadow: 0 4px 0 #ddd6fe;
   text-align: left;
 }
 
@@ -19,34 +18,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #7c3aed;
+  background: #722f5a;
   color: #ffffff;
   font-weight: 800;
+  border: 2px solid #b8dcf0;
   border-radius: 50%;
-}
-
-.medal-1 {
-  background: #f5b301;
-  color: #1f2937;
-}
-
-.medal-2 {
-  background: #9ca3af;
-  color: #1f2937;
-}
-
-.medal-3 {
-  background: #cd7f32;
-  color: #ffffff;
 }
 
 .name {
   flex: 1;
   font-size: 18px;
   font-weight: 700;
+  color: #ffffff;
 }
 
 .score {
+  padding: 4px 12px;
+  background: #b8dcf0;
+  color: #1c4a66;
   font-weight: 800;
-  color: #2563eb;
+  border-radius: 999px;
 }
